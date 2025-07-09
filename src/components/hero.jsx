@@ -1,9 +1,7 @@
 export default function Hero() {
     return (
         <>
-            {/* HERO PRINCIPAL */}
             <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-[#3A3A3A] items-center gap-10 px-6 lg:px-20 py-12 relative overflow-hidden">
-                {/* TEXTO */}
                 <div className="flex flex-col w-full max-w-xl justify-center gap-6 z-10 text-center md:text-left animate-fade-in">
                     <h1 className="text-[36px] sm:text-[48px] md:text-[64px] font-extrabold text-[#F3EFF5] leading-tight font-montserrat drop-shadow-lg">
                         Aliados de Última Milla
@@ -30,8 +28,6 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
-
-                {/* IMAGEN */}
                 <div className="hidden lg:flex justify-center items-center z-10 animate-fade-in">
                     <img
                         src="./assets/LUM-home-img-2.png"
@@ -40,10 +36,7 @@ export default function Hero() {
                     />
                 </div>
             </section>
-
-            {/* TRABAJE CON NOSOTROS */}
             <section className="grid grid-cols-1 lg:grid-cols-2 items-center px-6 lg:px-20 min-h-[80vh] bg-[#FFE000] py-16 relative overflow-hidden">
-                {/* CONTENIDO */}
                 <div className="flex flex-col gap-8 z-10 text-center lg:text-left animate-fade-in">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#3A3A3A] max-w-xl mx-auto lg:mx-0 drop-shadow-sm">
                         ¡Trabaje con nosotros!
