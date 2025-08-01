@@ -1,3 +1,7 @@
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Box3D from "./box3D";
+
 export default function Hero() {
     return (
         <>
@@ -28,15 +32,16 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
-                <div className="hidden lg:flex justify-center items-center z-10 animate-fade-in">
-                    <img
-                        src="./assets/LUM-home-img-2.png"
-                        alt="Aliados logísticos"
-                        className="w-full max-w-[420px] h-auto object-contain drop-shadow-2xl"
-                    />
+                <div id="box" className="hidden lg:flex justify-center items-center z-10 aspect-square">
+                    <Canvas >
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[2, 2, 2]} />
+                        <Box3D />
+                        <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
+                    </Canvas>
                 </div>
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-2 items-center px-6 lg:px-20 min-h-[80vh] bg-[#FFE000] py-16 relative overflow-hidden">
+            <section className="grid grid-cols-1 lg:grid-cols-2 items-center px-6 lg:px-20 min-h-screen bg-[#FFE000] py-16 relative overflow-hidden">
                 <div className="flex flex-col gap-8 z-10 text-center lg:text-left animate-fade-in">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#3A3A3A] max-w-xl mx-auto lg:mx-0 drop-shadow-sm">
                         ¡Trabaje con nosotros!
